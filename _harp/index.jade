@@ -1,0 +1,126 @@
+#headerwrap
+      .container
+        .row
+          .col-lg-8.col-lg-offset-2
+            h3 I am 
+            h1 Atul Arvind
+            h5 A passioniate Odoo/OpenERP Expert having 4+ years of experiance
+          .col-lg-8.col-lg-offset-2.himg
+            img.img-responsive(src='public/img/browser.png')
+    .container.mtb
+      .row
+        .col-lg-6
+          h4 Frequently Asked
+          .hline
+          p
+            a(href='#') Why Choose Odoo?
+          p
+            a(href='#') How Odoo fits for your business?
+          p
+            a(href='#') Is odoo totally free?
+          p
+            a(href='#') How to use odoo in my organization?
+          p
+            a(href='#') What kind of customization is possible in odoo?
+        .col-lg-6
+          h4 Latest Posts
+          .hline
+          p
+            a(href='single-post.html') My new site is live now.
+          p
+            a(href='single-post.html') How to install Odoo on Ubuntu 16.04 LTS?
+          p
+            a(href='single-post.html') How to get started with Odoo Development?
+          p
+            a(href='single-post.html') How to automate Odoo Database backup?
+          p
+            a(href='single-post.html') How to Develope first Odoo custom module?
+    #twrap
+      .container.centered
+        .row
+          .col-lg-8.col-lg-offset-2
+            i.icon-comments-alt
+            p
+              | Highly Telented, Excellent work.
+            h4
+              br
+              | Pandora Design LLC
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
+    script(src='/public/js/jquery.isotope.min.js')
+    script(src='public/js/bootstrap.min.js')
+    script(src='public/js/retina-1.1.0.js')
+    script(src='public/js/jquery.hoverdir.js')
+    script(src='public/js/jquery.hoverex.min.js')
+    script(src='public/js/jquery.prettyPhoto.js')
+    script(src='public/js/custom.js')
+    script.
+      // Portfolio
+      (function($) {
+      "use strict";
+      var $container = $('.portfolio'),
+      $items = $container.find('.portfolio-item'),
+      portfolioLayout = 'fitRows';
+      if( $container.hasClass('portfolio-centered') ) {
+      portfolioLayout = 'masonry';
+      }
+      $container.isotope({
+      filter: '*',
+      animationEngine: 'best-available',
+      layoutMode: portfolioLayout,
+      animationOptions: {
+      duration: 750,
+      easing: 'linear',
+      queue: false
+      },
+      masonry: {
+      }
+      }, refreshWaypoints());
+      function refreshWaypoints() {
+      setTimeout(function() {
+      }, 1000);
+      }
+      $('nav.portfolio-filter ul a').on('click', function() {
+      var selector = $(this).attr('data-filter');
+      $container.isotope({ filter: selector }, refreshWaypoints());
+      $('nav.portfolio-filter ul a').removeClass('active');
+      $(this).addClass('active');
+      return false;
+      });
+      function getColumnNumber() {
+      var winWidth = $(window).width(),
+      columnNumber = 1;
+      if (winWidth > 1200) {
+      columnNumber = 5;
+      } else if (winWidth > 950) {
+      columnNumber = 4;
+      } else if (winWidth > 600) {
+      columnNumber = 3;
+      } else if (winWidth > 400) {
+      columnNumber = 2;
+      } else if (winWidth > 250) {
+      columnNumber = 1;
+      }
+      return columnNumber;
+      }
+      function setColumns() {
+      var winWidth = $(window).width(),
+      columnNumber = getColumnNumber(),
+      itemWidth = Math.floor(winWidth / columnNumber);
+      $container.find('.portfolio-item').each(function() {
+      $(this).css( {
+      width : itemWidth + 'px'
+      });
+      });
+      }
+      function setPortfolio() {
+      setColumns();
+      $container.isotope('reLayout');
+      }
+      $container.imagesLoaded(function () {
+      setPortfolio();
+      });
+      $(window).on('resize', function () {
+      setPortfolio();
+      });
+      })(jQuery);
+

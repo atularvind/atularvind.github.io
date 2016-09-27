@@ -1,0 +1,78 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name="description" content="#{ description }")
+    meta(name='author', content='Atul Arvind')
+    link(rel='shortcut icon', href='public/ico/favicon.ico')
+    title= title
+    link(href='public/css/bootstrap.css', rel='stylesheet')
+    link(href='public/css/style.css', rel='stylesheet')
+    link(href='https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css', rel='stylesheet')
+    script(src='public/js/modernizr.js')
+  body
+    // Fixed navbar
+    .navbar.navbar-default.navbar-fixed-top(role='navigation')
+      .container
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='index.html') Atul Arvind
+        .navbar-collapse.collapse.navbar-right
+          ul.nav.navbar-nav
+            li.active
+              a(href='index.html') HOME
+            li
+              a(href='about.html') ABOUT
+            li
+              a(href='blog.html') BLOG
+            li
+              a(href='portfolio.html') PORTFOLIO
+            li
+              a(href='contact.html') CONTACT
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown')
+                | EXTRA 
+                b.caret
+              ul.dropdown-menu
+                li
+                  a(href='photography.html') PHOTOGRAPHY
+!= yield	
+    #footerwrap
+      .container
+        .row
+          .col-lg-4
+            h4 About me
+            .hline-w
+            p
+              | Hello, 
+              | I am Atul Arvind Makwana, odoo expert + lead developer + analyst having 4+ years of experience, Working 
+              | with Openerp/Odoo from v5 to v9 and still continue.
+          .col-lg-4
+            h4 About Site
+            .hline-w
+            p
+              | This site is made with lots of love
+              br
+              | using Static Site Server/Generator Harp and 
+              br
+              | Proudly hosted on Github.
+          .col-lg-4
+            h4 Find me here
+            .hline-w
+            p
+              a(href='https://facebook.com/atularvindmakwana')
+                i.icon-facebook
+              a(href='https://twitter.com/atularvind')
+                i.icon-twitter
+              a(href='https://www.linkedin.com/in/atulmakwana')
+                i.icon-linkedin
+              a(href='https://www.odoo.com/forum/help-1/user/41064')
+                i.icon-circle-blank
+              a(href='http://stackoverflow.com/users/1312904/atul-arvind')
+                i.icon-stackexchange
