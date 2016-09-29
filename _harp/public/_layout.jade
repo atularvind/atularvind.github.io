@@ -6,12 +6,12 @@ html(lang='en')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     meta(name="description" content="#{ description }")
     meta(name='author', content='Atul Arvind')
-    link(rel='shortcut icon', href='public/ico/favicon.ico')
+    link(rel='shortcut icon', href='assets/ico/favicon.ico')
     title= title
-    link(href='public/css/bootstrap.css', rel='stylesheet')
-    link(href='public/css/style.css', rel='stylesheet')
+    link(href='assets/css/bootstrap.css', rel='stylesheet')
+    link(href='assets/css/style.css', rel='stylesheet')
     link(href='https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css', rel='stylesheet')
-    script(src='public/js/modernizr.js')
+    script(src='assets/js/modernizr.js')
   body
     // Fixed navbar
     .navbar.navbar-default.navbar-fixed-top(role='navigation')
@@ -25,7 +25,7 @@ html(lang='en')
           a.navbar-brand(href='index.html') Atul Arvind
         .navbar-collapse.collapse.navbar-right
           ul.nav.navbar-nav
-            li.active
+            li
               a(href='index.html') HOME
             li
               a(href='about.html') ABOUT
@@ -66,13 +66,13 @@ html(lang='en')
             h4 Find me here
             .hline-w
             p
-              a(href='https://facebook.com/atularvindmakwana')
+              a(href='https://facebook.com/atularvindmakwana', target='_blank')
                 i.icon-facebook
-              a(href='https://twitter.com/atularvind')
+              a(href='https://twitter.com/atularvind', target='_blank')
                 i.icon-twitter
-              a(href='https://www.linkedin.com/in/atulmakwana')
+              a(href='https://www.linkedin.com/in/atulmakwana', target='_blank')
                 i.icon-linkedin
-              a(href='https://www.odoo.com/forum/help-1/user/41064')
+              a(href='https://www.odoo.com/forum/help-1/user/41064', target='_blank')
                 i.icon-circle-blank
-              a(href='http://stackoverflow.com/users/1312904/atul-arvind')
+              a(href='http://stackoverflow.com/users/1312904/atul-arvind', target='_blank')
                 i.icon-stackexchange
