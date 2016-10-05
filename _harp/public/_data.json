@@ -13,5 +13,60 @@
     "title": "About Atul Arvind | Odoo Expert",
     "date": "2016-09-28",
     "description": "Hello! I am Atul Arvind an Odoo Expert + lead developer + analysit having 4+ years of stong experiance from India."
+  },
+  "blog": {
+    "title": "Blog of Atul Arvind | Odoo Expert",
+    "date": "2016-09-28",
+    "description": "A List of blog for Odoo OpenERP technical & functional help, tips, installation, customization & development with new and old api.",
+    "blog_list": [ 
+      {
+        "blog_title": "How to install Odoo in Ubuntu 16.04 LTS?",
+        "blog_desc": "Read how i created this blog using Harpjs",
+        "blog_image": "https://image.freepik.com/free-photo/workers-with-documents-on-a-tablet_1150-87.jpg", 
+        "blog_link": "/odoo-install-ubuntu-14-04-lts.html"
+      },
+      {
+        "blog_title": "My new site is live now.",
+        "blog_desc": "After lots of learning I have created my blog on github.io using harp static site generator.",
+        "blog_image": "https://image.freepik.com/free-photo/rocks-stacked-in-the-sea_1088-590.jpg", 
+        "blog_link": "/atul-arvinds-site-is-live.html"
+      }
+    ],
+    "sidepost_list": [
+      {
+        "title": "How to install Odoo in ubuntu 16.04",
+        "link": "http://www.odoo.yenthevg.com/installing-odoo-9-ubuntu-16-04"
+      },
+      {
+        "title": "What is odoo?",
+        "link": "http://www.odoo.yenthevg.com/installing-odoo-9-ubuntu-16-04"
+      }
+    ]
+  },
+  "sitemap": {
+    "page_list": [
+      {
+        "title": "Home",
+        "link": "/index.html"
+      },
+      {
+        "title": "About",
+        "link": "/about.html"
+      },
+      {
+        "title": "Blog",
+        "link": "/blog.html"
+      }
+    ],
+    "post_list": [
+      {
+        "title": "How to install Odoo in ubuntu 16.04 LTS?",
+        "link": "/blog.html"
+      },
+      {
+      "title": "My new site is live now.",
+      "link": "/atul-arvinds-site-is-live.html"
+      }
+    ]
   }
 }

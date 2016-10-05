@@ -10,6 +10,8 @@ html(lang='en')
     link(rel='shortcut icon', href='assets/ico/favicon.ico')
     title= title
     link(href='assets/css/bootstrap.css', rel='stylesheet')
+    if title == "Blog of Atul Arvind | Odoo Expert"
+      link(href='assets/css/blog.css', rel='stylesheet')
     link(href='assets/css/style.css', rel='stylesheet')
     link(href='https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css', rel='stylesheet')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js')
@@ -62,7 +64,11 @@ html(lang='en')
               br
               | using Static Site Server/Generator Harp and 
               br
-              | Proudly hosted on Github.
+              | Proudly hosted on Github. 
+              br
+              | See all my pages on 
+              a(href='/sitemap.html', target='_self') Sitemap 
+              | page.
           .col-lg-4
             h4 Find me here
             .hline-w
@@ -77,3 +83,6 @@ html(lang='en')
                 i.icon-circle-blank
               a(href='http://stackoverflow.com/users/1312904/atul-arvind', target='_blank')
                 i.icon-stackexchange
+        .row
+          .col-lg-12
+            h5 Copyright  ©  2010-2016 
