@@ -4,14 +4,14 @@
       h3 Blog post from my mind.
 
 .container
-  .row
+  .row(style='margin-bottom:30px;')
     .col-lg-8
       .grid
         - blog_list.forEach(function(post) {
         a(href=post.blog_link)
           .grid-item
             figure.effect-th
-              img.lazy(data-original=post.blog_image, alt=post.blog_title)
+              img.img-responsive.lazy(data-original=post.blog_image, alt=post.blog_title)
               figcaption
                 h2= post.blog_title
                 p.description= post.blog_desc
@@ -19,8 +19,10 @@
     .col-md-4(style='margin-top: 22px;')
       .list-group
         - sidepost_list.forEach(function(sidepost) {
-        a.list-group-item(href=sidepost.link)= sidepost.title
+        a.list-group-item(href=sidepost.link, target=sidepost.target)= sidepost.title
         - })
+  .row
+    .col-lg-12
 
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js')

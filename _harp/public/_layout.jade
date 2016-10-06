@@ -6,14 +6,17 @@ html(lang='en')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     meta(name="description" content="#{ description }")
     meta(name='author', content='Atul Arvind')
-    meta(name='google-site-verification', content='FKpRZegd0WhGyFDiSn8IwGGywmAoSPtRjaM-xcY4CaA')
+    if type == 'home'
+      meta(name='google-site-verification', content='FKpRZegd0WhGyFDiSn8IwGGywmAoSPtRjaM-xcY4CaA')
     link(rel='shortcut icon', href='assets/ico/favicon.ico')
     title= title
     link(href='assets/css/bootstrap.css', rel='stylesheet')
-    if title == "Blog of Atul Arvind | Odoo Expert"
+    if type == "blogs"
       link(href='assets/css/blog.css', rel='stylesheet')
     link(href='assets/css/style.css', rel='stylesheet')
     link(href='https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css', rel='stylesheet')
+    if type == 'blog_post'
+      script(src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js')
   body
     // Fixed navbar
@@ -79,10 +82,14 @@ html(lang='en')
                 i.icon-twitter
               a(href='https://www.linkedin.com/in/atulmakwana', target='_blank')
                 i.icon-linkedin
+              a(href='https://github.com/atularvind', target='_blank')
+                i.icon-github
               a(href='https://www.odoo.com/forum/help-1/user/41064', target='_blank')
                 i.icon-circle-blank
               a(href='http://stackoverflow.com/users/1312904/atul-arvind', target='_blank')
                 i.icon-stackexchange
+              
+
         .row
           .col-lg-12
             h5 Copyright  ©  2010-2016 
