@@ -1,0 +1,19 @@
+#blue
+  .container
+    .row
+      h3 Sitemap.
+.container.mtb
+  .row
+    .col-lg-6
+      h3 Pages
+      .list-group
+        - page_list.forEach(function(sitemap) {
+        a.list-group-item(href=sitemap.link)= sitemap.title
+        - })
+
+    .col-lg-6
+      h3 Blog post
+      .list-group
+        - post_list.forEach(function(sitemap) {
+        a.list-group-item(href=sitemap.link)= sitemap.title
+        - })
