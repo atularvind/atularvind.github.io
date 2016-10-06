@@ -5,7 +5,7 @@
 .container.mtb
   .row
     .col-lg-6
-      img.img-responsive(src='assets/img/atularvind.png', alt='Atul Arvind Makwana')
+      img.img-responsive.lazy(src='assets/img/atularvind.png', alt='Atul Arvind Makwana')
     .col-lg-6
       h4 Hello World!.
       p
@@ -108,6 +108,11 @@
             |  With a German Odoo Partner.
   .page-header.text-center
     a.btn.btn-lg.btn-theme(href='contact.html') Say Hello!
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js')
+  script(type='text/javascript').
+    $("img.lazy").lazyload({
+    effect : "fadeIn"
+    });
 
 
 
