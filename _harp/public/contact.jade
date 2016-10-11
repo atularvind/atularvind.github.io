@@ -1,6 +1,30 @@
-#blue
-  .container
-    .row
-      h3 Contact.
-.container(style='margin-bottom:30px;')
-  iframe(src='https://docs.google.com/forms/d/e/1FAIpQLSdoW_zLelnBUM21tmEis8VRHOltbtRZKNK-brl5pOCrHJlR1w/viewform?embedded=true', width='1200', height='1000', frameborder='0', marginheight='0', marginwidth='0') Contact form is Loading...
+.card.card-contact.card-raised
+  .header.header-raised.header-info.text-center
+    h4.card-title Drop a Message
+  .content
+    form#contact-form(role='form', method='post', action='http://formspree.io/atul.surficle@gmail.com')
+      .controls
+        .row
+          .col-md-6
+            .form-group.label-floating.form-info.is-empty
+              label.control-label Enter your full name
+              input.form-control(type='text', name='name', required='')
+              span.material-input
+          .col-md-6
+            .form-group.label-floating.form-info.is-empty
+              label.control-label Enter your valid e-mail address
+              input.form-control(type='email', name='email', required='')
+              span.material-input
+        .form-group.label-floating.form-info.is-empty
+          label.control-label Enter your valuable message
+          textarea#message.form-control(name='message', required='', rows='6')
+          span.material-input
+        .row
+          .col-md-6
+            .checkbox
+              label.checkbox
+                input(type='checkbox', name='robot', required='', data-validation-required-message='If you are human you must check this box.')
+                span.checkbox-material
+                |                                                 I'm not a robot
+          .col-md-6
+            button.btn.btn-info.pull-right(type='submit') Send Message

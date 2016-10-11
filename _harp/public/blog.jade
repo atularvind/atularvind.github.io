@@ -1,35 +1,45 @@
-#blue
-  .container
-    .row
-      h3 Blog post from my mind.
-
-.container
-  .row(style='margin-bottom:30px;')
-    .col-lg-8
-      .grid
-        - blog_list.forEach(function(post) {
-        a(href=post.blog_link)
-          .grid-item
-            figure.effect-th
-              img.img-responsive.lazy(data-original=post.blog_image, alt=post.blog_title)
-              figcaption
-                h2= post.blog_title
-                p.description= post.blog_desc
-        - })
-    .col-md-4(style='margin-top: 22px;')
-      .list-group
-        - sidepost_list.forEach(function(sidepost) {
-        a.list-group-item(href=sidepost.link, target=sidepost.target)= sidepost.title
-        - })
-  .row
-    .col-lg-12
-
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js')
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js')
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/retina.js/2.1.0/retina.min.js')
-    script(type='text/javascript').
-      $("img.lazy").lazyload({
-      effect : "fadeIn"
-      });
-
+.row
+  .col-md-8.col-md-offset-2.text-center
+    .button-group.filters-button-group
+      button.btn.btn-info.btn-round(data-filter='*')
+        i.material-icons developer_board
+        |  All
+        .ripple-container
+      button.btn.btn-info.btn-round(data-filter='.Odoo')
+        i.material-icons panorama_fish_eye
+        |  Odoo
+        .ripple-container
+      button.btn.btn-info.btn-round(data-filter='.Productivity')
+        i.material-icons trending_up
+        |  Productivity
+        .ripple-container
+      button.btn.btn-info.btn-round(data-filter='.Garden')
+        i.material-icons local_florist
+        |  Garden
+        .ripple-container
+      button.btn.btn-info.btn-round(data-filter='.Pics')
+        i.material-icons camera_alt
+        |  Pics
+        .ripple-container
+.section
+  #grid.row
+    for post,slug in public.posts._data
+      .col-md-4.element-item(class= post.categ)
+        .card.card-blog
+          .card-image
+            a(href= "/posts/#{ slug }")
+              img.img.lazy(data-original= post.img, alt= post.page_title)
+            .ripple-container
+          .content
+            h6.category.text-info
+              i.material-icons bookmark
+              span.caps= post.categ
+            h4.card-title
+              a(href= "/posts/#{ slug }")= post.page_title
+            p.card-description= post.desc
+            .footer.text-center
+              a(href= "/posts/#{ slug }")
+                button.btn.btn-info.btn-round
+                  i.material-icons lightbulb_outline
+                  |  Read Story
+                  .ripple-container

@@ -1,45 +1,37 @@
-#headerwrap
-      .container
-        .row
-          .col-lg-8.col-lg-offset-2
-            h3 I am 
-            h1 Atul Arvind
-            h5 A passioniate Odoo/OpenERP Expert having 4+ years of experiance
-          .col-lg-8.col-lg-offset-2.himg
-            img.img-responsive(src='assets/img/browser.png')
-    .container.mtb
-      .row
-        .col-lg-6
-          h4 Frequently Asked
-          .hline
-          p
-            a(href='#') Why Choose Odoo?
-          p
-            a(href='#') How Odoo fits for your business?
-          p
-            a(href='#') Is odoo totally free?
-          p
-            a(href='#') How to use odoo in my organization?
-          p
-            a(href='#') What kind of customization is possible in odoo?
-        .col-lg-6
-          h4 Latest Posts
-          .hline
-          p
-            a(href='single-post.html') My new site is live now.
-          p
-            a(href='single-post.html') How to install Odoo on Ubuntu 16.04 LTS?
-          p
-            a(href='single-post.html') How to get started with Odoo Development?
-          p
-            a(href='single-post.html') How to automate Odoo Database backup?
-          p
-            a(href='single-post.html') How to Develope first Odoo custom module?
-    
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js')
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/retina.js/2.1.0/retina.min.js')
-    script(src='https://cdn.jsdelivr.net/jquery.hoverdir/1.1.1/jquery.hoverdir.min.js')
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/prettyPhoto/3.1.6/js/jquery.prettyPhoto.min.js')
-    
+.section
+  .row
+    .col-md-6
+      h4.text-center Latest Blog post
+      .card
+        .content.content-info
+          h4.card-title
+            a(href='/posts/my-first-post')
+              i.material-icons lightbulb_outline
+              |  My first post
+          .footer
+            .author
+              a(href='#atularvind#')
+                i.fa.fa-calendar
+                span
+                |   11 October 2016
+            .stats
+              i.fa.fa-bookmark
+              |  Odoo
+    .col-md-6
+      h4.text-center Latest Pages
+      a(href='#atularvind#')
+        .card
+          .content.content-info
+            h4.card-title
+              a(href='/sitemap')
+                i.material-icons description
+                |  Sitemap
+.section
+  .container
+    .row
+      .col-md-12.text-center
+        a.btn.btn-social.btn-fill.btn-info(href='/contact')
+          i.fa.fa-comment-o
+          |   Lets have a talk!
+          .ripple-container
 
