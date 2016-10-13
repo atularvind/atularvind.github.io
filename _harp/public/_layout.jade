@@ -124,9 +124,9 @@ html(lang='en')
               .social-feed
                 - news_list.forEach(function(news) {
                 .feed-line
-                  i.fa.fa-github.text-info
+                  i.fa.fa-bullhorn
                   p
-                    a(href=news.link)= news.desc
+                    a(href=news.link, class=text-muted)= news.desc
                 - })
             .col-md-4
               h5 Contact me

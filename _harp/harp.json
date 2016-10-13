@@ -7,8 +7,13 @@
     "robots": "index,follow",
     "news_list": [
       {
+        "type": "fa-fa-bullhorn",
+        "desc": "Added discuss comment system.",
+        "link": "/posts/my-first-post"
+      },
+      {
         "type": "fa-github",
-        "desc": "Created atularvind.github.io on github pages using harp static site generator",
+        "desc": "Created atularvind.github.io on github pages using harp static site generator.",
         "link": "/posts/my-first-post"
       }
     ]

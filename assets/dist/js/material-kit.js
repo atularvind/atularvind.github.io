@@ -249,4 +249,3 @@ function isElementInViewport(elem) {
 
     return ((elemTop < viewportBottom) && (elemBottom > viewportTop));
 }
-
