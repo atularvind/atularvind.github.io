@@ -65,7 +65,7 @@ html(lang='en')
       .container.section
         if type=='post'
           row
-            .col-md-8.col-md-offset-2
+            .col-md-10.col-md-offset-1
               != yield
         else
           != yield
@@ -103,7 +103,7 @@ html(lang='en')
       if type == 'post'
         hr
         .row
-          .col-md-8.col-md-offset-2    
+          .col-md-8.col-md-offset-2
             #disqus_thread
         .row
           .col-md-12(style="height:20px;")
