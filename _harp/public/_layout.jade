@@ -9,6 +9,7 @@ html(lang='en')
     meta(name="keywords" content="#{ keywords }")
     meta(name="robots" content="#{ robots }")
     meta(name='author', content='Atul Arvind')
+    meta(name='google-site-verification', content='FKpRZegd0WhGyFDiSn8IwGGywmAoSPtRjaM-xcY4CaA')
     title= title
     link(href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css', rel='stylesheet')
     link(href='/assets/dist/css/material-kit.css', rel='stylesheet')
@@ -62,7 +63,12 @@ html(lang='en')
             h4=page_desc
     .main.main-raised
       .container.section
-        != yield
+        if type=='post'
+          row
+            .col-md-8.col-md-offset-2
+              != yield
+        else
+          != yield
       if type == 'post'
         .row
           p.text-info.text-center Posted on : #{date}
@@ -94,6 +100,14 @@ html(lang='en')
               button.btn.btn-social.btn-fill.btn-odoo
                 i.fa.fa-circle-o
                 .ripple-container
+      if type == 'post'
+        hr
+        .row
+          .col-md-8.col-md-offset-2    
+            #disqus_thread
+        .row
+          .col-md-12(style="height:20px;")
+
     footer.footer.footer-white.footer-big
       .container
         .content
